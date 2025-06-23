@@ -34,8 +34,8 @@ Watch the demo of the GrainPalette app in action!
   - Basmati
   - Jasmine
   - Arborio
-  - Brown
-  - White
+  - Ipsala
+  - karacadag
 - 🖼️ Upload an image and get predictions instantly
 - 📊 Shows prediction with confidence score
 - 🧠 Model code available in `model.ipynb`
@@ -61,8 +61,8 @@ The development of **GrainPalette** followed a structured approach integrating d
 > ├── Basmati/
 > ├── Jasmine/
 > ├── Arborio/
-> ├── Brown/
-> └── White/
+> ├── Ipsala/
+> └── Karacadag/
 > ```
 
 ---
