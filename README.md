@@ -23,7 +23,7 @@ GrainPalette is a deep learning-powered web application that classifies rice gra
 
 Watch the demo of the GrainPalette app in action!
 
-[![GrainPalette Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![GrainPalette Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/6bVCDQYL-MU)
 
 ---
 
