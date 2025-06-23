@@ -8,7 +8,7 @@ GrainPalette is a deep learning-powered web application that classifies rice gra
 
 <!-- Row 1 -->
 <p align="center">
-  <img src="static/Screenshot 2025-06-23 191936.png alt="Home page" width="45%" style="margin: 10px;" />
+  <img src="static/Screenshot 2025-06-23 191936.png" alt="Home page" width="45%" style="margin: 10px;" />
   <img src="static/Screenshot 2025-06-23 192016.png" alt="Detail page" width="45%" style="margin: 10px;" />
 </p>
 
