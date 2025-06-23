@@ -14,10 +14,11 @@ GrainPalette is a deep learning-powered web application that classifies rice gra
 
 ---
 
-## 🚀 Live Demo
+##  Live Demo Video
 
-🧪 Currently runs locally  
-🌐 Deployment on Render/Hugging Face coming soon!
+Watch the demo of the GrainPalette app in action!
+
+[![GrainPalette Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 ---
 
@@ -37,25 +38,66 @@ GrainPalette is a deep learning-powered web application that classifies rice gra
 
 ---
 
-## 🗂 Project Structure
+## 🛠️ Project Development Process
 
-GrainPalette/
-├── app.py # Flask backend
-├── rice_model.h5 # Trained rice classification model
-├── model.ipynb # Jupyter notebook for model training
-├── templates/ # HTML files
-│ ├── index.html
-│ ├── predict.html
-│ ├── details.html
-│ └── contact.html
-├── static/ # CSS, images, styling
-│ ├── style.css
-│ └── images/
-│ ├── rice_bg.jpg
-│ └── app_screenshot.png
-├── uploads/ # Uploaded files (auto-created)
-└── README.md
+The development of **GrainPalette** followed a structured approach integrating deep learning, data preprocessing, and web application development. Below is a detailed breakdown of the process:
 
+---
+
+### 📁 1. Dataset Collection & Preparation
+
+- The dataset was organized into **five folders**, each representing a rice type: `Basmati`, `Jasmine`, `Arborio`, `Brown`, and `White`.
+- Each folder contained multiple rice grain images captured in similar conditions.
+- The image directory structure helped in **automatic labeling** using `ImageDataGenerator` or `os.walk()`.
+
+> **Structure:**
+> ```
+> dataset/
+> ├── Basmati/
+> ├── Jasmine/
+> ├── Arborio/
+> ├── Brown/
+> └── White/
+> ```
+
+---
+
+### 🧹 2. Data Preprocessing
+
+- All images were resized to a consistent size `(224x224)` for compatibility with CNN models.
+- Pixel values were normalized by dividing by 255.0.
+- Data was split into **training** and **validation** sets with an 80-20 ratio.
+- Techniques such as **augmentation** (rotation, zoom, flips) were optionally used to improve generalization.
+
+---
+
+### 🧠 3. Model Building Using Transfer Learning
+
+- A **pre-trained CNN architecture** (e.g., `MobileNetV2`, `VGG16`, or `ResNet50`) was used as a base model.
+- The top layers were **customized** to match the 5-class classification task.
+- The model was compiled using:
+  - `Adam` optimizer
+  - `categorical_crossentropy` loss
+  - `accuracy` as the evaluation metric
+
+- Training was done using Keras with `model.fit()` and included callbacks like `EarlyStopping` to avoid overfitting.
+
+---
+
+### 📈 4. Model Evaluation
+
+- Accuracy and loss graphs were plotted for training and validation sets.
+- A **classification report** was generated to evaluate precision, recall, F1-score.
+- Confusion matrix and sample predictions were visualized to understand model behavior.
+
+---
+
+### 💾 5. Model Saving
+
+- Once trained, the model was saved as a `rice.h5` file using:
+
+```python
+model.save("rice_model.h5")
 
 ---
 
